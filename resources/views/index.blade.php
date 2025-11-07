@@ -99,7 +99,7 @@
 
             <!-- Slide 1 -->
             <div class="absolute inset-0 transition-opacity duration-1000 opacity-100 slide">
-                <img src="https://niche.style/wp-content/uploads/2024/02/three-pastel-colored-womens-hand-bags-on-pink-back-2023-11-27-04-57-25-utc-copy.jpg"
+                <img src="https://uniquekiosk.com/wp-content/uploads/2024/01/442qfvh2720ju0piof.png"
                     alt="Slide 1" class="w-full h-full object-cover" />
                 <div class="absolute inset-0 bg-black/20"></div>
                 <div class="absolute inset-0 flex flex-col items-center justify-center text-center px-3 sm:px-6 md:px-12">
@@ -120,8 +120,8 @@
 
             <!-- Slide 2 -->
             <div class="absolute inset-0 transition-opacity duration-1000 opacity-0 slide">
-                <img src="https://static.vecteezy.com/system/resources/thumbnails/026/858/640/small/of-a-minimalistic-white-purse-on-a-table-with-ample-copy-space-with-copy-space-photo.jpg"
-                    alt="Slide 2" class="w-full h-full object-cover filter blur-[1px]" />
+                <img src="https://cdn.shopify.com/s/files/1/1337/8601/articles/H-DHTQ_4_029a6778-a2aa-4db8-a9c2-60a35581d8d5.jpg?v=1602950884"
+                    alt="Slide 2" class="w-full h-full object-cover filter blur-[px]" />
                 <div class="absolute inset-0 bg-black/20"></div>
                 <div class="absolute inset-0 flex flex-col items-center justify-center text-center px-3 sm:px-6 md:px-12">
                     <h1 style="font-family: 'Playfair Display', serif;"
@@ -141,8 +141,8 @@
 
             <!-- Slide 3 -->
             <div class="absolute inset-0 transition-opacity duration-1000 opacity-0 slide">
-                <img src="https://png.pngtree.com/background/20210711/original/pngtree-fashion-women-s-bag-promotion-season-literary-pink-banner-picture-image_1119353.jpg"
-                    alt="Slide 3" class="w-full h-full object-cover filter blur-[1px]" />
+                <img src="https://boesltd.ca/cdn/shop/collections/DSC_6501.jpg?v=1694818902&width=480"
+                    alt="Slide 3" class="w-full h-full object-cover filter blur-[px]" />
                 <div class="absolute inset-0 bg-black/20"></div>
                 <div class="absolute inset-0 flex flex-col items-center justify-center text-center px-3 sm:px-6 md:px-12">
                     <h1 style="font-family: 'Playfair Display', serif;"
@@ -623,7 +623,7 @@
     <section class="max-w-6xl mx-auto px-4 mt-12" data-aos="fade-up" data-aos-duration="3000">
         <!-- Header -->
         <div class="relative bg-cover bg-center bg-no-repeat text-center mb-6 rounded-xl overflow-hidden"
-            style="background-image: url('https://static-01.daraz.pk/p/77925c1f2a1cf2c3f70aee4411ebcf96.jpg'); background-attachment: fixed; height: 70vh;">
+            style="background-image: url('https://blog.fashionphile.com/wp-content/uploads/2024/03/HandbagStorageTips_BlogHero.jpg'); background-attachment: fixed; height: 70vh;">
 
             <!-- Overlay (dark layer for text readability) -->
             <div class="absolute inset-0 bg-black/40"></div>
@@ -646,14 +646,14 @@
 
                 $featured = [
                     [
-                        101,
+                        50,
                         'Best Seller',
                         'Stylish Leather Handbag',
                         35,
                         'https://img.drz.lazcdn.com/static/pk/p/82b4a09ca0b1f7ef1fdab8661f3c2507.jpg_720x720q80.jpg',
                     ],
                     [
-                        102,
+                        2,
                         'Trending',
                         'Trendy Tote Bag',
                         28,
@@ -692,15 +692,65 @@
                         107,
                         'Limited',
                         'Trendy Tote Bag',
-                        28,
+                        24,
                         'https://pk-live-21.slatic.net/kf/Sd3a1848ab8f949b28fcece7edba362c6s.jpg',
                     ],
                     [
                         108,
                         'Popular',
                         'Elegant Backpack',
-                        28,
+                        35,
                         'https://img.drz.lazcdn.com/static/pk/p/d8606c6f0a4ff266ddf452639dfbe97b.jpg_720x720q80.jpg',
+                    ],
+                    [
+                        108,
+                        'Trendy',
+                        'Classic Black Backpack',
+                        33,
+                        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTo8VTaC6i0ElHlDAmh-IXttm9p__jG-_L78A&s',
+                    ],
+                    [
+                        108,
+                        'New',
+                        'Compact Pink HandBag',
+                        40,
+                        'https://img.drz.lazcdn.com/static/pk/p/ca8c02b3df339c71d07d47501b613832.jpg_720x720q80.jpg',
+                    ],
+                    [
+                        108,
+                        'Editor’s Pick',
+                        'Sporty ShoulderBag',
+                        35,
+                        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoMGiMvc0YLWkt9zvNp5IiLWuPGu-eC2Or2Q&s',
+                    ],
+                    [
+                        108,
+                        'Best Seller',
+                        'Urban Street Backpack',
+                        22,
+                        'https://pk-live-21.slatic.net/kf/Sa59975d74df74695aeca181033269040u.jpg',
+                    ],
+                    [
+                        108,
+                        'Limited Edition',
+                        'Premium Shouderbag',
+                        27,
+                        'https://img.drz.lazcdn.com/static/pk/p/5290e1986be61a92c20be387e56644be.jpg_720x720q80.jpg',
+                    ],
+                    [
+                        108,
+                        'New Arrival',
+                        'Modern Backpack',
+                        50,
+                        'https://static-01.daraz.pk/p/9b15e1a8dbb1f73891f25755b2fd2bcc.jpg',
+                    ],
+                    [109, 'Trendy', 'Casual Tote Bag', 28, 'https://video-play.daraz.pk/cover/196745.jpg'],
+                    [
+                        108,
+                        'Stylish',
+                        'Classic Black Handbag',
+                        45,
+                        'https://static-01.daraz.pk/p/7fedb40acdacc1f5828cc5433be85cd7.jpg',
                     ],
                 ];
             @endphp
@@ -721,11 +771,15 @@
                         <div
                             class="anim_appear-bottom position-absolute bottom-0 start-0 end-0 d-flex align-items-center p-2 gap-2 justify-content-center">
 
-                            <button class="btn btn-sm text-white js-add-to-cart"
-                                style="background-color:#b56576; border-color:#b56576; border-radius:10px"
-                                data-id="{{ $p[0] }}" data-name="{{ $p[2] }}"
-                                data-price="{{ $p[3] }}" data-qty="1" title="Add To Cart"><i
-                                    class="fa-solid fa-cart-shopping"></i></button>
+                            <form method="GET" action="{{ route('shop.index') }}">
+                                @csrf
+                                <input type="hidden" name="product_id" value="{{ $p[0] }}">
+                                <input type="hidden" name="quantity" value="1">
+                                <button type="submit" class="btn btn-sm text-white"
+                                    style="background-color:#b56576; border-color:#b56576; border-radius:10px">
+                                    <i class="fa-solid fa-cart-shopping"></i>
+                                </button>
+                            </form>
 
                             <button class="btn btn-sm btn-outline-secondary js-add-to-wishlist" style="border-radius:10px"
                                 data-id="{{ $p[0] }}" data-name="{{ $p[2] }}"
@@ -748,8 +802,8 @@
             /* Hidden by default */
             .anim_appear-bottom {
                 /* opacity: 0;
-                                                                                                                                                        transform: translateY(20px);
-                                                                                                                                                        transition: all 0.3s ease; */
+                                                                                                                                                                                    transform: translateY(20px);
+                                                                                                                                                                                    transition: all 0.3s ease; */
             }
 
             /* Show on hover */
@@ -761,8 +815,8 @@
             /* Hidden by default */
             .anim_appear-bottom {
                 /* opacity: 0;
-                                                                                                                                                        transform: translateY(20px);
-                                                                                                                                                        transition: all 0.3s ease; */
+                                                                                                                                                                                    transform: translateY(20px);
+                                                                                                                                                                                    transition: all 0.3s ease; */
             }
 
             /* Show on hover */
@@ -804,7 +858,7 @@
             window.speechSynthesis.onvoiceschanged = loadVoices;
 
             function speakProductInfo(text) {
-            
+
                 if ('speechSynthesis' in window) {
                     window.speechSynthesis.cancel();
 
@@ -904,68 +958,6 @@
     </script>
 
 
-    <!-- ====================== BRAND SECTIONS (CLEAN) ====================== -->
-    {{-- <section class="max-w-5xl mx-auto px-4 mt-14 space-y-4">
-        @php
-            $brands = [
-                [
-                    'id' => 'louisvuitton',
-                    'title' => 'Louis Vuitton',
-                    'short' =>
-                        'Louis Vuitton is the world’s most iconic luxury bag brand, known for craftsmanship and timeless designs like Speedy, Neverfull, and Alma.',
-                    'full' =>
-                        'Founded in 1854 (Paris). Signature lines: Speedy, Neverfull, Alma, Capucines. Monogram canvas & premium leathers. Global prestige & investment value.',
-                ],
-                [
-                    'id' => 'gucci',
-                    'title' => 'Gucci',
-                    'short' =>
-                        'Gucci blends bold design with Italian craft. Icons include GG Marmont, Dionysus, and Jackie 1961.',
-                    'full' =>
-                        'Est. 1921 (Florence). Signatures: GG Marmont, Dionysus, Ophidia, Jackie 1961. Double-G, bamboo handles, horsebit. Reinvents classics with modern twists.',
-                ],
-                [
-                    'id' => 'prada',
-                    'title' => 'Prada',
-                    'short' =>
-                        'Prada is known for minimalist design & innovation. Galleria, Re-Edition Nylon, and Cleo are customer favorites.',
-                    'full' =>
-                        'Est. 1913 (Milan). Signatures: Galleria Saffiano, Re-Edition Nylon, Cleo, Cahier. Minimalism, clean lines, innovative nylon; growing recycled lines.',
-                ],
-            ];
-        @endphp
-
-        @foreach ($brands as $b)
-            <details class="bg-white rounded-xl shadow p-5">
-                <summary class="cursor-pointer text-lg font-semibold text-[var(--brand)]">{{ strtoupper($b['title']) }}
-                </summary>
-                <div class="mt-3">
-                    <p class="text-gray-700">{{ $b['short'] }}</p>
-                    <p class="text-gray-600 mt-2">{{ $b['full'] }}</p>
-                    <div class="flex gap-2 mt-3">
-                        <button onclick="downloadDescription('{{ $b['title'] }}', '{{ $b['full'] }}')"
-                            class="px-4 py-2 rounded-md text-white"
-                            style="background-color: var(--brand);">Download</button>
-                    </div>
-                </div>
-            </details>
-        @endforeach
-    </section> --}}
-
-    <!-- ====================== BAGVERSE HERO COPY ====================== -->
-    {{-- <section class="max-w-5xl mx-auto px-4 mt-14">
-        <div class="bg-white rounded-2xl shadow p-6 md:p-8 text-center">
-            <h1 class="text-2xl md:text-3xl font-extrabold">BAGVERSE PAKISTAN</h1>
-            <p class="text-sm tracking-wide text-gray-500">LUXURY & ELEGANCE FOR YOUR STYLE</p>
-            <div class="text-gray-700 space-y-3 mt-4 text-sm md:text-base">
-                <p>Bagverse is a premium brand with decades of craftsmanship and millions of happy customers.</p>
-                <p>Enjoy free delivery, warranty, and easy returns on original branded bags at affordable prices.</p>
-                <p>Cash on delivery across major cities in Pakistan.</p>
-                <p class="font-medium">Collection: Handbags • Shoulder Bags • Tote Bags • Backpacks • Clutches • Wallets
-                </p>
-            </div>
-        </div>
-    </section> --}}
 
     <!-- ====================== HIDDEN FORMS ====================== -->
     <form id="cartAddForm" action="{{ route('cart.add') }}" method="POST" class="hidden">

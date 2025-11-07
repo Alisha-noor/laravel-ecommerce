@@ -7,8 +7,14 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Transaction extends Model
 {
-    protected $fillable = ['order_id','method','status','amount','code','notes'];
-
+    // In app/Models/Transaction.php
+    protected $fillable = [
+        'order_id',
+        'user_id',
+        'mode', 
+        'status',
+        'amount'
+    ];
     public function order(): BelongsTo
     {
         return $this->belongsTo(Order::class);

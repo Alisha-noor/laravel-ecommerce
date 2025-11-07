@@ -3,9 +3,6 @@
 @section('content')
     <div class="container py-4">
 
-        <h2 class="mb-3" style="color: #b56576;">
-            Your Cart ({{ \Surfsidemedia\Shoppingcart\Facades\Cart::instance('cart')->count() }})
-        </h2>
 
         @if ($cartItems->isEmpty())
             <div class="alert alert-warning text-center fw-semibold" style="border-color:#b56576; color:#b56576;">
@@ -16,46 +13,42 @@
             <div class="table-responsive shadow-sm rounded-3 border border-light">
                 <table class="table align-middle mb-0">
                     <thead style="background-color:#b56576; color:#fff;">
-                        <tr class="cart-row" style="background-color:#b56576; color:#fff;">
-                            <th style="background-color:#b56576; color:#fff;" class="py-3 px-3">Image</th>
-                            <th style="background-color:#b56576; color:#fff;" class="py-3 px-3">Item</th>
-                            <th style="background-color:#b56576; color:#fff;" class="text-nowrap py-3 px-3" width="120">
-                                Price</th>
-                            <th style="background-color:#b56576; color:#fff;" class="text-nowrap py-3 px-3" width="220">
-                                Quantity</th>
-                            <th style="background-color:#b56576; color:#fff;" class="text-nowrap py-3 px-3" width="140">
-                                Subtotal</th>
-                            <th style="background-color:#b56576; color:#fff;" width="120"></th>
+                        <tr>
+                            <th class="py-3 px-3">Image</th>
+                            <th class="py-3 px-3">Item</th>
+                            <th class="text-nowrap py-3 px-3" width="120">Price</th>
+                            <th class="text-nowrap py-3 px-3" width="220">Quantity</th>
+                            <th class="text-nowrap py-3 px-3" width="140">Subtotal</th>
+                            <th width="120"></th>
                         </tr>
                     </thead>
                     <tbody>
                         @foreach ($cartItems as $item)
-                            <tr>
+                            <tr class="cart-row">
                                 <td>
-                                    <img src="{{ asset('uploads/products/' . $item->product->image) }}" width="80">
+                                    <img src="{{ asset('uploads/products/' . $item->product->image) }}" width="80"
+                                        alt="{{ $item->product->name }}">
                                 </td>
                                 <td>{{ $item->product->name }}</td>
-                                <td>${{ $item->price }}</td>
+                                <td>${{ number_format($item->price, 2) }}</td>
                                 <td>{{ $item->quantity }}</td>
-                                <td>${{ $item->price * $item->quantity }}</td>
-                                <td>
+                                <td>${{ number_format($item->price * $item->quantity, 2) }}</td>
+                                <td class="d-flex flex-column gap-1">
                                     <form method="POST" action="{{ route('cart.reduce.qty', $item->id) }}">
                                         @csrf @method('PUT')
-                                        <button class="qty-btn px-2">-</button>
+                                        <button type="submit" class="qty-btn">-</button>
                                     </form>
                                     <form method="POST" action="{{ route('cart.increase.qty', $item->id) }}">
                                         @csrf @method('PUT')
-                                        <button class="qty-btn px-2">+</button>
+                                        <button type="submit" class="qty-btn">+</button>
                                     </form>
                                     <form method="POST" action="{{ route('cart.remove', $item->id) }}">
                                         @csrf @method('DELETE')
-                                        <button class="remove-btn px-2">Remove</button>
+                                        <button type="submit" class="remove-btn">Remove</button>
                                     </form>
-
                                 </td>
                             </tr>
                         @endforeach
-
                     </tbody>
                 </table>
             </div>
@@ -78,6 +71,7 @@
                     border: 1px solid #b56576;
                     color: #b56576;
                     background: #fff;
+                    width: 100%;
                 }
 
                 .qty-btn:hover {
@@ -90,6 +84,7 @@
                     border: 1px solid #b56576;
                     color: #b56576;
                     background: #fff;
+                    width: 100%;
                 }
 
                 .remove-btn:hover {
@@ -97,6 +92,7 @@
                     color: #fff;
                 }
             </style>
+
 
             {{-- Actions / Summary --}}
             <div class="mt-4 p-3 rounded shadow-sm" style="border:1px solid #eee; background:#fafafa;">
@@ -134,24 +130,24 @@
                         class="d-flex flex-column align-items-start align-items-md-end text-start text-md-end ms-0 ms-md-auto gap-1">
                         <div>Subtotal: <strong>${{ number_format($checkout['subtotal'] ?? $subtotal, 2) }}</strong></div>
                         <div>Tax: <strong>${{ number_format($checkout['tax'] ?? $tax, 2) }}</strong></div>
-                        <div>Discount: <strong>${{ number_format($checkout['discount'] ?? 0, 2) }}</strong></div>
+                        <div>Discount: <strong>${{ number_format($discount, 2) }}</strong></div>
                         <div class="fs-5" style="color:#b56576;">Total:
                             <strong>${{ number_format($checkout['total'] ?? $total, 2) }}</strong>
                         </div>
 
-                        <div class="mt-3 d-flex flex-column flex-sm-row gap-2 justify-content-end w-100 w-md-auto">
+                        {{-- <div class="mt-3 d-flex flex-column flex-sm-row gap-2 justify-content-end w-100 w-md-auto">
                             <form method="POST" action="{{ route('cart.clear') }}">
                                 @csrf @method('DELETE')
                                 <button class="btn w-100" style="border:1px solid #b56576; color:#b56576;">Clear
-                                    Cart</button>
-                            </form>
-                            <a class="btn w-100 w-sm-auto" href="{{ route('cart.checkout') }}"
-                                style="background:#b56576; color:#fff;">Checkout</a>
-                        </div>
+                                    Cart</button> --}}
+                        </form>
+                        <a class="btn w-100 w-sm-auto" href="{{ route('cart.checkout') }}"
+                            style="background:#b56576; color:#fff;">Checkout</a>
                     </div>
                 </div>
             </div>
-        @endif
+    </div>
+    @endif
     </div>
 
     {{-- Small helpers --}}

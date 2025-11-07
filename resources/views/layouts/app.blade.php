@@ -1,5 +1,6 @@
 <!doctype html>
 <html>
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -1050,19 +1051,21 @@
                             </div>
 
                             <div class="search-popup js-hidden-content">
-                                <form method="GET" action="{{ route('shop.index') }}" class="p-4 border rounded-lg mb-6">
-    <p class="text-uppercase text-secondary fw-medium mb-4">What are you looking for?</p>
-    <div class="position-relative">
-        <input class="search-field__input search-popup__input w-100 fw-medium"
-               type="text" name="name" placeholder="Search products"
-               value="{{ request('name') }}" />
-        <button class="btn-icon search-popup__submit" type="submit">
-            <svg width="20" height="20">
-                <use href="#icon_search" />
-            </svg>
-        </button>
-    </div>
-</form>
+                                <form method="GET" action="{{ route('shop.index') }}"
+                                    class="p-4 border rounded-lg mb-6">
+                                    <p class="text-uppercase text-secondary fw-medium mb-4">What are you looking for?
+                                    </p>
+                                    <div class="position-relative">
+                                        <input class="search-field__input search-popup__input w-100 fw-medium"
+                                            type="text" name="name" placeholder="Search products"
+                                            value="{{ request('name') }}" />
+                                        <button class="btn-icon search-popup__submit" type="submit">
+                                            <svg width="20" height="20">
+                                                <use href="#icon_search" />
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </form>
 
                             </div>
                         </div>
@@ -1110,24 +1113,36 @@
                                 </a>
                             </div>
                         @else
-                            <div class="flex items-center gap-2">
-                                <a href="{{ route('show', auth()->user()->id) }}"
-                                    class="fw-bold btn btn-sm px-4 rounded-full me-3 text-[#b56576]">
-                                    Hi, {{ auth()->user()->name }}
-                                </a>
+                            <a href="{{ route('userprofile') }}"
+                                class="d-flex align-items-center fw-bold btn btn-sm rounded-full me-3 text-[#b56576]"
+                                style="gap:8px; background:none; border:none;">
 
-                                <form method="POST" action="{{ route('logout') }}" class="m-0">
-                                    @csrf
-                                    <button type="submit"
-                                        class="px-3 py-1 border border-[#b56576] rounded-full text-sm font-medium text-[#b56576] hover:bg-[#b56576] hover:text-white transition">
-                                        Logout
-                                    </button>
-                                </form>
-                            </div>
-                        @endguest
-                    </div>
+                                {{-- ✅ User Avatar --}}
+                                @if (auth()->user()->avatar ?? false)
+                                    <img src="{{ asset('storage/' . auth()->user()->avatar) }}" alt="Profile"
+                                        class="rounded-circle" style="width:32px; height:32px; object-fit:cover;">
+                                @else
+                                    <img src="https://ui-avatars.com/api/?name={{ urlencode(auth()->user()->name) }}&background=b56576&color=fff&size=64"
+                                        alt="Default Avatar" class="rounded-circle"
+                                        style="width:32px; height:32px; object-fit:cover;">
+                                @endif
+
+                                Hi, {{ auth()->user()->name }}
+                            </a>
+
+
+                            <form method="POST" action="{{ route('logout') }}" class="m-0">
+                                @csrf
+                                <button type="submit"
+                                    class="px-3 py-1 border border-[#b56576] rounded-full text-sm font-medium text-[#b56576] hover:bg-[#b56576] hover:text-white transition">
+                                    Logout
+                                </button>
+                            </form>
+                        </div>
+                    @endguest
                 </div>
             </div>
+        </div>
         </div>
 
         <!-- Mobile Menu -->

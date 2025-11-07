@@ -62,33 +62,33 @@
                                 </div>
                             </div>
                         </div>
-                        
+
 
                         {{-- Thumbnails --}}
                         <div class="product-single__thumbnail mt-3">
                             <div class="swiper-container"
                                 data-settings='{"resizeObserver": true, "slidesPerView": 5, "spaceBetween": 12, "breakpoints": {"320":{"slidesPerView":4},"768":{"slidesPerView":5}}}'>
-                                 <div class="swiper-wrapper">
-            {{-- Main Product Image --}}
-            @if ($product->image)
-                <div class="swiper-slide product-single__image-item">
-                    <img loading="lazy" class="img-fluid"
-                        src="{{ asset('uploads/products/' . $product->image) }}"
-                        width="104" height="104" alt="{{ $product->name }} thumbnail" />
-                </div>
-            @endif
+                                <div class="swiper-wrapper">
+                                    {{-- Main Product Image --}}
+                                    @if ($product->image)
+                                        <div class="swiper-slide product-single__image-item">
+                                            <img loading="lazy" class="img-fluid"
+                                                src="{{ asset('uploads/products/' . $product->image) }}" width="104"
+                                                height="104" alt="{{ $product->name }} thumbnail" />
+                                        </div>
+                                    @endif
 
-            {{-- Gallery Images --}}
-            @if (!empty($gallery) && is_array($gallery))
-                @foreach ($gallery as $gimg)
-                    <div class="swiper-slide product-single__image-item">
-                        <img loading="lazy" class="img-fluid"
-                            src="{{ asset('uploads/products/' . trim($gimg)) }}"
-                            width="104" height="104" alt="{{ $product->name }} thumbnail" />
-                    </div>
-                @endforeach
-            @endif
-        </div>
+                                    {{-- Gallery Images --}}
+                                    @if (!empty($gallery) && is_array($gallery))
+                                        @foreach ($gallery as $gimg)
+                                            <div class="swiper-slide product-single__image-item">
+                                                <img loading="lazy" class="img-fluid"
+                                                    src="{{ asset('uploads/products/' . trim($gimg)) }}" width="104"
+                                                    height="104" alt="{{ $product->name }} thumbnail" />
+                                            </div>
+                                        @endforeach
+                                    @endif
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -159,7 +159,7 @@
                                 <div class="qty-control__increase">+</div>
                             </div>
 
-                            <input type="hidden" name="id" value="{{ $product->id }}" />
+                            <input type="hidden" name="product_id" value="{{ $product->id }}" />
                             <input type="hidden" name="name" value="{{ $product->name }}" />
                             <input type="hidden" name="price"
                                 value="{{ $product->sale_price == '' ? $product->regular_price : $product->sale_price }}" />
@@ -325,7 +325,7 @@
                         </div>
 
                         <div class="product-single__reviews-list">
-                            @foreach ($product->reviews()->where('status', 'approved')->latest()->get() as $review)
+                            @foreach ($product->reviews()->latest()->get() as $review)
                                 <div class="product-single__reviews-item d-flex gap-3">
                                     <div class="customer-avatar flex-shrink-0">
                                         <img loading="lazy" src="{{ asset('assets/images/avatar.jpg') }}" width="48"
@@ -433,10 +433,10 @@
                                         </a>
 
                                         {{-- Add To Cart for related product --}}
-                                        <form method="POST" action="{{ route('cart.add') }}"
+                                        <form form method="POST" action="{{ route('cart.add') }}"
                                             class="anim_appear-bottom position-absolute start-0 end-0 bottom-0 p-2">
                                             @csrf
-                                            <input type="hidden" name="id" value="{{ $rproduct->id }}">
+                                            <input type="hidden" name="product_id" value="{{ $product->id }}">
                                             <input type="hidden" name="name" value="{{ $rproduct->name }}">
                                             <input type="hidden" name="quantity" value="1">
                                             <input type="hidden" name="price" value="{{ $rPrice }}">

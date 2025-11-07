@@ -45,7 +45,7 @@ class ShopController extends Controller
         }
 
         // 📦 Get products with pagination
-        $products = $query->paginate(12)->appends($request->query());
+        $products = $query->paginate(20)->appends($request->query());
 
         return view('shop', compact('products'));
     }
